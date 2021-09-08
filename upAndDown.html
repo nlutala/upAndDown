@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First JavaScript Program</title>
+    <style>
+        .buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="padding: 10% 20%;">
+    <p id="number" style="text-align:center; font-size:50px;">0</p>
+    <div class="buttons">
+        <button onclick="increment()">Click to Increment</button>
+        <button onclick="decrement()">Click to Decrement</button>
+        <button onclick="reset()">Start again</button>
+    </div>
+    <!-- 
+        <button onclick="window.print()">Click to print the page</button> 
+    -->
+    
+    <script>
+        var number = 0;
+
+        function checkBoredom() {
+            if (number == 51 || number == -51) {
+                alert("Are you this bored? Go and do something productive.");
+            }
+        }
+        
+        function increment() {
+            number++;
+            checkBoredom();
+            document.getElementById("number").innerHTML = number;
+        }
+
+        function decrement() {
+            number--;
+            checkBoredom();
+            document.getElementById("number").innerHTML = number;
+        }
+
+        function reset() {
+            number = 0;
+            document.getElementById("number").innerHTML = number;
+        }
+    </script>
+</body>
+</html>
